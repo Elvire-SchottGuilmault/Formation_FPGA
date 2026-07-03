@@ -49,11 +49,13 @@ begin
 	--	Cout = '0'
 	--	S = '0'
 	
+	--Test des sorties attendues
 	assert Cout = '0'
 	   report "test failed - Cout" severity failure;
     assert S = '0'
         report "test failed - S" severity failure;
        
+    --Envoi d'un message si tout va bien
     assert false report "test 1 '000' OK" severity note;
 	
 	-- hold reset state for 90 ns, (total of 100 ns from start).
