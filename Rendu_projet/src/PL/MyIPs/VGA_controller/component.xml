@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>VGA_controller</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TDATA</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TSTRB</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TLAST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TVALID</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TREADY</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_TUSER</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS_ARESETN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_ARESETN</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_AXIS_ACLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>S_AXIS_ACLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_ACLK.ASSOCIATED_BUSIF">S_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXIS_ACLK.ASSOCIATED_RESET">S_AXIS_ARESETN</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>VGA_controller</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0a9cc172</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>VGA_controller</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0a9cc172</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f72c714b</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>S_AXIS_ACLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_ARESETN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TREADY</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TDATA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) - 1)">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TSTRB</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TLAST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TUSER</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXIS_TVALID</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_VGA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VGA_HS_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VGA_VS_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VGA_R</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VGA_B</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>VGA_G</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S_AXIS_TDATA_WIDTH</spirit:name>
+        <spirit:displayName>C S Axis Tdata Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH">24</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/VGA_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_0a9cc172</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/VGA_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/VGA_controller_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f72c714b</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>VGA_controller_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S_AXIS_TDATA_WIDTH</spirit:name>
+      <spirit:displayName>C S Axis Tdata Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXIS_TDATA_WIDTH">24</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">VGA_controller_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>VGA_controller_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>15</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-09-29T21:56:34Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d7fb79c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353d3bef_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c03210_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@502ebfbb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d3b38_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed61396_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40320a53_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149eccd4_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3b2f94_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d8ae10_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d8ef1e9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f791532_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a32a6f1_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21d79ad3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae6eaaa_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fe7f59_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46bfd090_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef95fa1_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aa4a973_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64eccc96_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2107bbc6_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@258c4686_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@571163eb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397b7092_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2318c9cb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590840e7_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2362fd27_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6266a503_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54157700_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ab70e34_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c569ea_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ddee3c3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d222e4d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71425ba0_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22fa7904_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fba8bff_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69c7bc80_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b9c37e_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17b9bc91_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b6228cf_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bdf9cc5_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd49044_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@621e4fd3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c4f8d5_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b7bec5c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4ed69d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2cc8b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56326b71_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@555df1df_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2572c580_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4fd285_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69da93d4_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77ee5478_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26862fc3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5675a0e4_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6799484c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14f092d0_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aa74773_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fd40416_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@392fefe7_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44261665_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@761a4009_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3312d30b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d5fdba_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d4718de_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52815f49_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13505cb5_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@345666e7_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7501c164_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354ce02d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e1dadb2_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cfdb35c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f91e201_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19388f24_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30c83f4a_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34e66f9d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23a658cc_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@245a82c1_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bf9936d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@395905b8_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645cba73_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b58eef3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e71b5eb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29e9dff2_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb4af5a_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53a86701_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e78fb4c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@405a5f28_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5044773d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3848bda2_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@381c569c_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@569dfcd7_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6035e0_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c5d81b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6de28d83_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@101ffaf6_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542169fb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65632be9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@741c8bfb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14f90e77_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47776633_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df4f870_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7374af14_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19b9e016_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d291274_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40f1ec40_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@666bed17_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11410ccb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cc9ffb8_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13edece9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f0bc25_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b341ae_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86fa964_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dd60dfc_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba771c7_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41232cfa_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62555814_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@93a0900_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e204c2_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bbc0cb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76fa1c87_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@469d1928_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b441367_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ea1b18_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28f153d1_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e5e330a_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77314a0e_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69eea9c6_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@468a5105_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5065ee92_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745cc3d9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@728c3694_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7020551b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e4dfb9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c851f8_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5adb1bdb_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6a3b66_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf9209d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46c99f7d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1172e65f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a310515_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c364136_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6866d252_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23896d77_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73fbe94e_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bdde371_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0b5107_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e7aa411_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a7337d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ffbe72_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d1d203_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44621491_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfa905f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1458cb43_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@683ce953_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf7bc4b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e881490_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69708c28_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d9cc623_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e9565_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62dbf359_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cdd61fd_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@171a7078_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a0bee66_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/vga_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caafdbd_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4265fd68_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@471b3bc6_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1262a920_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53779f8b_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75d043c7_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f8e8b6c_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a916af6_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45e39d8c_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f461f6_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16a91c90_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56846fde_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c9a3572_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6728e4cc_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4446c24_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@482a2577_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd29076_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21c1c13d_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea6bdba_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@757fed7b_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43224b2f_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16acf58c_ARCHIVE_LOCATION">v:/MyIPs/VGA_controller</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d940104d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="317bf51e"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="789caebc"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="783afdfa"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="4790858a"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

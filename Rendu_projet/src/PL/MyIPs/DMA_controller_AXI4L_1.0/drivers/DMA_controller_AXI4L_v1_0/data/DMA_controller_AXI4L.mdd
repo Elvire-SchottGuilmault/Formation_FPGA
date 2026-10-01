@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER DMA_controller_AXI4L
+	OPTION supported_peripherals = (DMA_controller_AXI4L);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = DMA_controller_AXI4L;
+END DRIVER
