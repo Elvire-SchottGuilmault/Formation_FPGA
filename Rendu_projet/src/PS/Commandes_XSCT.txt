@@ -1,0 +1,24 @@
+# - Chargement de la DMA
+# Pour se placer là où sont nos images (chemin du dossier avec les images à modifier)
+cd {C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\Sources_externes\TestPatterns}
+# Pour charger l'image (nom du fichier image à modifier)
+mwr -bin -file sample_in_rgb.bin 0x10000000 307200
+
+# - Obsolète : Initialisation du DMA (adresse identique à la commande précédente de chargement, la deuxième commande lance le DMA, tout est déjà fait automatiquement au lancement firmware)
+mwr 0x44A00000 0x10000000
+mwr 0x44A00008 1
+
+# - Initialisation overlay
+# Affichage de l'overlay (1 pour l'overlay, 0 pour l'image d'origine seule)
+mwr 0x44a30000 1
+# Changement de couleur de l'overlay (RGB hexadécimal 8 bit par couleur, example 0x00ffff pour du cyan, 0xffff00 pour du jaune, 0xff00ff pour du magenta)
+mwr 0x44a30004 0x00ffff
+
+#Inititalisation binarisation -> modifier la valeur de seuil 20 (entre 1 et 255)
+mwr 0x44a20000 20
+
+# Sélection du flux d'entrée 
+# Entrée TPG
+mwr 0x44a10000 2
+#Entrée DMA
+mwr 0x44a10000 3

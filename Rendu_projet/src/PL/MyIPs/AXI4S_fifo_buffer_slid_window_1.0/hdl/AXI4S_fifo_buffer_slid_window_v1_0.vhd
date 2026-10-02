@@ -77,6 +77,7 @@ architecture arch_imp of AXI4S_fifo_buffer_slid_window_v1_0 is
         rd_en                     : in  std_logic := '0';
         din                       : in  std_logic_vector(C_S00_AXIS_TDATA_WIDTH-1 DOWNTO 0) := (OTHERS => '0');
         dout                      : out std_logic_vector(C_S00_AXIS_TDATA_WIDTH-1 DOWNTO 0) := (OTHERS => '0');
+        full                      : out std_logic := '0';
         prog_full                 : out std_logic := '0';
         empty                     : out std_logic := '1'
         );
@@ -91,6 +92,7 @@ architecture arch_imp of AXI4S_fifo_buffer_slid_window_v1_0 is
         rd_en                     : in  std_logic := '0';
         din                       : in  std_logic_vector(C_S00_AXIS_TDATA_WIDTH-1 DOWNTO 0) := (OTHERS => '0');
         dout                      : out std_logic_vector(C_S00_AXIS_TDATA_WIDTH-1 DOWNTO 0) := (OTHERS => '0');
+        full                      : out std_logic := '0';
         prog_full                 : out std_logic := '0';
         empty                     : out std_logic := '1'
         );
@@ -129,6 +131,9 @@ architecture arch_imp of AXI4S_fifo_buffer_slid_window_v1_0 is
     signal write_enable_2   : std_logic := '0';
     signal write_enable_3   : std_logic := '0';
     signal last_write_enable_2  : std_logic := '0';
+    signal last_write_enable_3  : std_logic := '0';
+    signal write_enable_2_recent    : std_logic := '0';
+    signal write_enable_3_recent    : std_logic := '0';
     
     signal read_enable_1    : std_logic := '0';
     signal read_enable_2    : std_logic := '0';
@@ -140,7 +145,7 @@ architecture arch_imp of AXI4S_fifo_buffer_slid_window_v1_0 is
     signal empty_1          : std_logic := '0';
     signal empty_2          : std_logic := '0';
     
-    signal prog_full_1      : std_logic := '0';
+    signal full_1           : std_logic := '0';
     signal prog_full_2      : std_logic := '0';
     signal prog_full_3      : std_logic := '0';
     
@@ -188,7 +193,7 @@ begin
                 din         => s00_axis_tdata,
                 dout        => data_read_1,
                 empty       => empty_1,
-                prog_full   => prog_full_1
+                full        => full_1
             );
             
         fifo_2 : fifo_generator_640
@@ -227,7 +232,7 @@ begin
                 din         => s00_axis_tdata,
                 dout        => data_read_1,
                 empty       => empty_1,
-                prog_full   => prog_full_1
+                full        => full_1
             );
             
         fifo_2 : fifo_generator_638
@@ -279,17 +284,17 @@ begin
     start_window_valid  <= '1' when ((read_enable_3 = '1') and (window_full = '1')) else '0';   -- m_tdata is valid when it contain an entire window and the buffer
                                                                                                 -- is ready to send a new column of pixel
     
-    s_tready    <= '1' when ((read_enable_1 = '1') or (prog_full_1 = '0')) else '0';    -- We can receive a value on AXI4S Slave and write it in fifo 1 
-                                                                                        -- if the fifo is not full (programable threshold)
-                                                                                        -- or if we know a value is read during this clock period
+    s_tready    <= '1' when (full_1 = '0') else '0';    -- We can receive a value on AXI4S Slave and write it in fifo 1 if the fifo is not full
     
     read_enable_1   <= '1' when (((empty_1 = '0') or (last_s_handshake = '1'))      -- We can read a value in fifo 1 if the fifo is not empty
-                                 and ((read_enable_2 = '1') or (prog_full_2 = '0')) -- and we know we can then write it in fifo 2 : it is not in a process of reset and it is either 
-                                 and (reset_time_last_fifos = '0')) else '0';            -- not full (programmable threshold) or if we know a value is read during this clock period 
+                                 and ((read_enable_2 = '1')                         -- and we know we can then write it in fifo 2 : it is not in a process
+                                      or ((prog_full_2 = '0') and (write_enable_2_recent = '0'))) -- of reset and it is either not full (programmable threshold) 
+                                 and (reset_time_last_fifos = '0')) else '0';                   -- or if we know a value is read during this clock period 
     
     read_enable_2   <= '1' when (((empty_2 = '0') or (last_write_enable_2 = '1'))   -- We can read a value in fifo 2 if the fifo is not empty
-                                 and ((read_enable_3 = '1') or (prog_full_3 = '0')) -- and we know we can then write it in fifo 2 : it is not in a process of reset and it is either 
-                                 and (reset_time_last_fifos = '0')) else '0';            -- not full (programmable threshold) or if we know a value is read during this clock period
+                                 and ((read_enable_3 = '1')                         -- and we know we can then write it in fifo 2 : it is not in a process
+                                      or ((prog_full_3 = '0') and (write_enable_3_recent = '0'))) -- of reset and it is either not full (programmable threshold)
+                                 and (reset_time_last_fifos = '0')) else '0';                   -- or if we know a value is read during this clock period
     
     read_enable_3   <= '1' when (((m_handshake = '1') or ((fill_window = '1') and (buffer_ready = '1') and (window_valid = '0')))    -- We read in fifo_3 in two circumstance if it is not in a process of reset :
                                  and (reset_time_last_fifos = '0')) else '0';                               --  - when we just emited data on AXI4S Master (the check that the buffer is ready
@@ -299,6 +304,9 @@ begin
     
     write_enable_2  <= '1' when ((last_read_enable_1 = '1') and (reset_time_last_fifos = '0')) else '0'; -- We can write on fifo 2 if the input, ie data_read_1, as been updated and the fifo 2 is not in a process of reset
     write_enable_3  <= '1' when ((last_read_enable_2 = '1') and (reset_time_last_fifos = '0')) else '0'; -- We can write on fifo 3 if the input, ie data_read_2, as been updated and the fifo 3 is not in a process of reset
+
+    write_enable_2_recent <= '1' when ((write_enable_2 = '1') or (last_write_enable_2 = '1')) else '0';
+    write_enable_3_recent <= '1' when ((write_enable_3 = '1') or (last_write_enable_3 = '1')) else '0'; 
     
     reset_fifo              <= NOT(s00_axis_aresetn);   -- From 'low active' to 'high active'
     reset_time_last_fifos   <= '1' when (cntr_reset_last_fifos /= 0) else '0';
@@ -358,30 +366,22 @@ begin
     end process;
     
     
-    -- Process to register last_read_enable_1
+    -- Process to register last_read_enable_x
     process(s00_axis_aclk)
     begin
         if (rising_edge (s00_axis_aclk)) then
             if (s00_axis_aresetn = '0') then
                 last_read_enable_1 <= '0';   -- Reset at 0
-            else
-                last_read_enable_1 <= read_enable_1; -- Update the value (see above)
-            end if;
-        end if;
-    end process;
-    
-    
-    -- Process to register last_read_enable_2
-    process(s00_axis_aclk)
-    begin
-        if (rising_edge (s00_axis_aclk)) then
-            if (s00_axis_aresetn = '0') then
                 last_read_enable_2 <= '0';   -- Reset at 0
+                last_read_enable_3 <= '0';   -- Reset at 0
             else
-                last_read_enable_2 <= read_enable_2; -- Update the value (see above)
+                last_read_enable_1 <= read_enable_1; -- Update the value
+                last_read_enable_2 <= read_enable_2; -- Update the value
+                last_read_enable_3 <= read_enable_3; -- Update the value
             end if;
         end if;
     end process;
+    
     
     -- Process to register last_s_handshake
     process(s00_axis_aclk)
@@ -395,29 +395,21 @@ begin
         end if;
     end process;
     
-    -- Process to register last_write_enable_2
+    
+    -- Process to register last_write_enable_x
     process(s00_axis_aclk)
     begin
         if (rising_edge (s00_axis_aclk)) then
             if (s00_axis_aresetn = '0') then
                 last_write_enable_2 <= '0';   -- Reset at 0
+                last_write_enable_3 <= '0';   -- Reset at 0
             else
-                last_write_enable_2 <= write_enable_2; -- Update the value (see above)
+                last_write_enable_2 <= write_enable_2; -- Update the value
+                last_write_enable_3 <= write_enable_3; -- Update the value
             end if;
         end if;
     end process;
     
-    -- Process to register last_read_enable_3
-    process(s00_axis_aclk)
-    begin
-        if (rising_edge (s00_axis_aclk)) then
-            if (s00_axis_aresetn = '0') then
-                last_read_enable_3 <= '0';   -- Reset at 0
-            else
-                last_read_enable_3 <= read_enable_3; -- Update the value (see above)
-            end if;
-        end if;
-    end process;
     
     -- Process to register window_valid (start 1 clock period after window_valid, stop after a handshake)
     nxt_window_valid  <= '1' when ((start_window_valid = '1') or ((window_valid = '1') and (m_handshake = '0'))) else '0';

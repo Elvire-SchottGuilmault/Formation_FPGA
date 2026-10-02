@@ -243,7 +243,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>85164eb1</spirit:value>
+            <spirit:value>c8757d72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -289,7 +289,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>85164eb1</spirit:value>
+            <spirit:value>c8757d72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -584,7 +584,7 @@
       <spirit:file>
         <spirit:name>hdl/AXI4S_fifo_buffer_slid_window_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2da0930a</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_fe3bb7ef</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -689,8 +689,8 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>40</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-29T18:45:23Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>46</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-02T15:48:39Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6771bd63_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3f75df19_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
@@ -1201,12 +1201,92 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@622bf2eb_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@69bc1812_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@8b75a9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@655fc4b7_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47138032_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@773238f_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@282f385c_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64445fe0_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2460ecde_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68b543e1_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5482b239_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad28d96_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49e4396b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a87f713_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74e78598_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1620b9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7814f338_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512cad84_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262f7652_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a1fab8_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c937837_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26502889_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@263ba0ad_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c097803_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40fcb97a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c39945_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7e7188_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f1f74d_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67b94e9b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e5c362_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10e8c346_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5841c949_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6751e328_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb3d039_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7405aecf_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a928511_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebb1c7b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f59114_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc3d92b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b68fecc_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c792a18_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a4cb0b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f3220e4_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@388621c2_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52715de4_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c72ae6f_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c465908_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@166ca6c4_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e3dd6f4_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597846eb_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@230494bd_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c68f811_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e0377b9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f394826_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5086ad05_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47319ff9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0f3f8_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@569b3f60_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@339abde5_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f794e5_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4efb0726_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff4325b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ecf9ada_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1803d895_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20f1b74_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d3070b9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69acf771_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c63d919_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ea9fe37_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bc20ede_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57033bbf_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4a3e46_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15c8a633_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19308b7f_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e48496_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@585b379a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c854d67_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@530f2a42_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d365615_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4180153d_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5700de83_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e9c837a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f9d525a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_fifo_buffer_slid_window_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="6b14e6ce"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="151465d2"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0c938ea1"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ece4d0a5"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b712ca5d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="da504080"/>
