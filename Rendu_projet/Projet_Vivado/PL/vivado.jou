@@ -1,0 +1,252 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 16 15:49:45 2026
+# Process ID: 23592
+# Current directory: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12932 C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL\Soc_Tracking.xpr
+# Log file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/vivado.log
+# Journal file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs [current_project]
+update_ip_catalog
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd}
+create_bd_cell -type ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 AXI4S_Line_buf_Slid_0
+set_property location {7 2301 182} [get_bd_cells AXI4S_Line_buf_Slid_0]
+connect_bd_intf_net [get_bd_intf_pins AXI4_Stream_RGB_to_g_0/M00_AXIS] [get_bd_intf_pins AXI4S_Line_buf_Slid_0/S00_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aclk]
+regenerate_bd_layout
+open_project C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_RGB_to_grey/test_RGB_to_grey.bd}
+create_bd_design "test_line_buf_slid_window"
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 AXI4S_Line_buf_Slid_0
+endgroup
+update_compile_order -fileset sources_1
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins AXI4S_Line_buf_Slid_0/S00_AXIS]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins AXI4S_Line_buf_Slid_0/M00_AXIS]
+endgroup
+create_bd_port -dir I -type clk -freq_hz 100000000 aclk
+connect_bd_net [get_bd_ports aclk] [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aclk]
+connect_bd_net [get_bd_ports aclk] [get_bd_pins AXI4S_Line_buf_Slid_0/m00_axis_aclk]
+startgroup
+create_bd_port -dir I -type rst aresetn
+endgroup
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aresetn]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins AXI4S_Line_buf_Slid_0/m00_axis_aresetn]
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -top
+add_files -norecurse c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+update_compile_order -fileset sources_1
+create_fileset -simset sim_lb_sd
+set_property SOURCE_SET sources_1 [get_filesets sim_lb_sd]
+add_files -fileset sim_lb_sd -norecurse C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd
+current_fileset -simset [ get_filesets sim_lb_sd ]
+update_compile_order -fileset sim_lb_sd
+set_property SOURCE_SET sources_1 [get_filesets sim_lb_sd]
+add_files -fileset sim_lb_sd -norecurse {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_monitor.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_driver.vhd}
+update_compile_order -fileset sim_lb_sd
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd}
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name s00_axis_tuser [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_tuser [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+make_wrapper -files [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -top
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+wait_on_run test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_line_buf_slid_window [get_filesets sim_lb_sd]
+set_property top_lib xil_defaultlib [get_filesets sim_lb_sd]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_lb_sd
+launch_simulation -simset [get_filesets sim_lb_sd ]
+launch_simulation -simset [get_filesets sim_lb_sd ]
+launch_simulation -simset [get_filesets sim_lb_sd ]
+launch_simulation -simset [get_filesets sim_lb_sd ]
+launch_simulation -simset [get_filesets sim_lb_sd ]
+launch_simulation -simset [get_filesets sim_lb_sd ]
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+wait_on_run test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type_sim.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+update_compile_order -fileset sources_1
+set_property used_in_synthesis true [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+update_compile_order -fileset sources_1
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd]
+ipx::merge_project_changes files [ipx::current_core]
+add_files -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+update_compile_order -fileset sources_1
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_file_group -type vhdl:simulation {} [ipx::current_core]
+set_property source_mgmt_mode DisplayOnly [current_project]
+reorder_files -after c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd {c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+ipx::merge_project_changes files [ipx::current_core]
+move_files -fileset sim_1 [get_files  {c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd}]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top AXI4S_Line_buf_Slid_window_v1_0 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_file_group -type vhdl:simulation {} [ipx::current_core]
+ipx::copy_contents_from [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]] [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+wait_on_run test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+ipx::reorder_files -before src/AXI4S_Line_buf_Slid_window_IN_sim.vhd src/buffer_type_sim.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 8 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target Simulation [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 9 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+generate_target Simulation [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+close_project
+save_bd_design

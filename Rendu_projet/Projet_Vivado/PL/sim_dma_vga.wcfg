@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_dma_vga_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_dma_vga" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="129301fs"></ZoomEndTime>
+      <Cursor1Time time="2fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="311"></NameColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/ap_clk" type="logic">
+      <obj_property name="ElementShortName">ap_clk</obj_property>
+      <obj_property name="ObjectShortName">ap_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/VGA_B" type="array">
+      <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/VGA_G" type="array">
+      <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/VGA_HS_O" type="logic">
+      <obj_property name="ElementShortName">VGA_HS_O</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS_O</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/VGA_R" type="array">
+      <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/VGA_VS_O" type="logic">
+      <obj_property name="ElementShortName">VGA_VS_O</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS_O</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/button0" type="logic">
+      <obj_property name="ElementShortName">button0</obj_property>
+      <obj_property name="ObjectShortName">button0</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider13">
+      <obj_property name="label">DMA_controller</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA_controller_0/U0/dma_start" type="logic">
+      <obj_property name="ElementShortName">dma_start</obj_property>
+      <obj_property name="ObjectShortName">dma_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA_controller_0/U0/dma_w" type="array">
+      <obj_property name="ElementShortName">dma_w[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_w[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA_controller_0/U0/dma_h" type="array">
+      <obj_property name="ElementShortName">dma_h[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_h[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA_controller_0/U0/dma_addr" type="array">
+      <obj_property name="ElementShortName">dma_addr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dma_addr[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider17">
+      <obj_property name="label">DMA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/ap_done" type="logic">
+      <obj_property name="ElementShortName">ap_done</obj_property>
+      <obj_property name="ObjectShortName">ap_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/ap_idle" type="logic">
+      <obj_property name="ElementShortName">ap_idle</obj_property>
+      <obj_property name="ObjectShortName">ap_idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/ap_ready" type="logic">
+      <obj_property name="ElementShortName">ap_ready</obj_property>
+      <obj_property name="ObjectShortName">ap_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out" type="protoinst">
+      <obj_property name="ElementShortName">STR_video_out</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/m_axi_gmem" type="protoinst">
+      <obj_property name="ElementShortName">m_axi_gmem</obj_property>
+      <obj_property name="ObjectShortName">m_axi_gmem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TDATA" type="array">
+      <obj_property name="ElementShortName">STR_video_out_TDATA[23:0]</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TDATA[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TVALID" type="logic">
+      <obj_property name="ElementShortName">STR_video_out_TVALID</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TREADY" type="logic">
+      <obj_property name="ElementShortName">STR_video_out_TREADY</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TKEEP" type="array">
+      <obj_property name="ElementShortName">STR_video_out_TKEEP[2:0]</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TKEEP[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TSTRB" type="array">
+      <obj_property name="ElementShortName">STR_video_out_TSTRB[2:0]</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TSTRB[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TUSER" type="array">
+      <obj_property name="ElementShortName">STR_video_out_TUSER[0:0]</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TUSER[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_dma_vga/dut/Soc_Tracking_i/DMA24bUnit_mm2s_0/STR_video_out_TLAST" type="array">
+      <obj_property name="ElementShortName">STR_video_out_TLAST[0:0]</obj_property>
+      <obj_property name="ObjectShortName">STR_video_out_TLAST[0:0]</obj_property>
+   </wvobject>
+</wave_config>

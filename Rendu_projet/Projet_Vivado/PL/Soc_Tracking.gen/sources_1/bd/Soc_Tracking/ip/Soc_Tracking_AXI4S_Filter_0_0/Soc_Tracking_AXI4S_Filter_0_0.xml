@@ -1,0 +1,2519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>Soc_Tracking_AXI4S_Filter_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_tuser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.TDATA_NUM_BYTES">9</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.TUSER_WIDTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.HAS_TSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.HAS_TKEEP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.HAS_TLAST">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXIS.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M00_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_tuser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TUSER_WIDTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.HAS_TSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.HAS_TKEEP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.HAS_TLAST">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>m00_axis_aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ARESETN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axis_aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ARESETN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>m00_axis_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>m00_axis_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.ASSOCIATED_BUSIF">M00_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.ASSOCIATED_RESET">m00_axis_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s00_axis_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axis_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.ASSOCIATED_BUSIF">S00_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.ASSOCIATED_RESET">s00_axis_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_ACLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesis</spirit:name>
+        <spirit:displayName>VHDL Synthesis</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>AXI4S_Filter_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:54 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6e13ce22</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6e13ce22</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Soc_Tracking_AXI4S_Filter_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:54 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6e13ce22</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:modelName>AXI4S_Filter_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:54 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:102a3810</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Soc_Tracking_AXI4S_Filter_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:54 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:102a3810</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 15:00:03 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:6e13ce22</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>s00_axis_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BITS_PIXEL&apos;)) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_WINDOW_SIZE&apos;)) ** 2)) - 1)">71</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BITS_PIXEL&apos;)) * (spirit:decode(id(&apos;MODELPARAM_VALUE.C_WINDOW_SIZE&apos;)) ** 2)) / 8) - 1)">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axis_tuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_BITS_PIXEL&apos;)) - 1)">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BITS_PIXEL&apos;)) / 8) - 1)">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>m00_axis_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_WINDOW_SIZE</spirit:name>
+        <spirit:displayName>C Window Size</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_WINDOW_SIZE">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_BITS_PIXEL</spirit:name>
+        <spirit:displayName>C Bits Pixel</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_BITS_PIXEL">8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_DIVISER</spirit:name>
+        <spirit:displayName>C Filter Diviser</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_DIVISER">16</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_1</spirit:name>
+        <spirit:displayName>C Filter Param 1 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_1">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_2</spirit:name>
+        <spirit:displayName>C Filter Param 1 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_2">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_3</spirit:name>
+        <spirit:displayName>C Filter Param 1 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_3">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_4</spirit:name>
+        <spirit:displayName>C Filter Param 1 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_1_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_5</spirit:name>
+        <spirit:displayName>C Filter Param 1 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_1_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_6</spirit:name>
+        <spirit:displayName>C Filter Param 1 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_1_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_1_7</spirit:name>
+        <spirit:displayName>C Filter Param 1 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_1_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_1_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_1</spirit:name>
+        <spirit:displayName>C Filter Param 2 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_1">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_2</spirit:name>
+        <spirit:displayName>C Filter Param 2 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_2">4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_3</spirit:name>
+        <spirit:displayName>C Filter Param 2 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_3">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_4</spirit:name>
+        <spirit:displayName>C Filter Param 2 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_2_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_5</spirit:name>
+        <spirit:displayName>C Filter Param 2 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_2_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_6</spirit:name>
+        <spirit:displayName>C Filter Param 2 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_2_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_2_7</spirit:name>
+        <spirit:displayName>C Filter Param 2 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_2_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_2_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_1</spirit:name>
+        <spirit:displayName>C Filter Param 3 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_1">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_2</spirit:name>
+        <spirit:displayName>C Filter Param 3 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_2">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_3</spirit:name>
+        <spirit:displayName>C Filter Param 3 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_3">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_4</spirit:name>
+        <spirit:displayName>C Filter Param 3 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_3_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_5</spirit:name>
+        <spirit:displayName>C Filter Param 3 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_3_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_6</spirit:name>
+        <spirit:displayName>C Filter Param 3 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_3_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_3_7</spirit:name>
+        <spirit:displayName>C Filter Param 3 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_3_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_3_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_1</spirit:name>
+        <spirit:displayName>C Filter Param 4 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_1">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_1">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_2</spirit:name>
+        <spirit:displayName>C Filter Param 4 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_2">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_2">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_3</spirit:name>
+        <spirit:displayName>C Filter Param 4 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_3">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_3">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_4</spirit:name>
+        <spirit:displayName>C Filter Param 4 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_5</spirit:name>
+        <spirit:displayName>C Filter Param 4 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_6</spirit:name>
+        <spirit:displayName>C Filter Param 4 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_4_7</spirit:name>
+        <spirit:displayName>C Filter Param 4 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_4_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_4_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_1</spirit:name>
+        <spirit:displayName>C Filter Param 5 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_1">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_1">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_2</spirit:name>
+        <spirit:displayName>C Filter Param 5 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_2">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_2">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_3</spirit:name>
+        <spirit:displayName>C Filter Param 5 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_3">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_3">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_4</spirit:name>
+        <spirit:displayName>C Filter Param 5 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_5</spirit:name>
+        <spirit:displayName>C Filter Param 5 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_6</spirit:name>
+        <spirit:displayName>C Filter Param 5 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_5_7</spirit:name>
+        <spirit:displayName>C Filter Param 5 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_5_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_5_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_1</spirit:name>
+        <spirit:displayName>C Filter Param 6 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_1">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_1">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_2</spirit:name>
+        <spirit:displayName>C Filter Param 6 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_2">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_2">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_3</spirit:name>
+        <spirit:displayName>C Filter Param 6 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_3">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_3">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_4</spirit:name>
+        <spirit:displayName>C Filter Param 6 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_5</spirit:name>
+        <spirit:displayName>C Filter Param 6 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_6</spirit:name>
+        <spirit:displayName>C Filter Param 6 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_6_7</spirit:name>
+        <spirit:displayName>C Filter Param 6 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_6_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_6_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_1</spirit:name>
+        <spirit:displayName>C Filter Param 7 1</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_1">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_1">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_2</spirit:name>
+        <spirit:displayName>C Filter Param 7 2</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_2">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_2">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_3</spirit:name>
+        <spirit:displayName>C Filter Param 7 3</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_3">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_3">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_4</spirit:name>
+        <spirit:displayName>C Filter Param 7 4</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_4">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_4">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_5</spirit:name>
+        <spirit:displayName>C Filter Param 7 5</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_5">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_5">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_6</spirit:name>
+        <spirit:displayName>C Filter Param 7 6</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_6">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_6">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_FILTER_PARAM_7_7</spirit:name>
+        <spirit:displayName>C Filter Param 7 7</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_FILTER_PARAM_7_7">0</spirit:value>
+        <spirit:vendorExtensions>
+          <xilinx:parameterInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="MODELPARAM_ENABLEMENT.C_FILTER_PARAM_7_7">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:parameterInfo>
+        </spirit:vendorExtensions>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_IMAGE_WIDTH</spirit:name>
+        <spirit:displayName>C Image Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_WIDTH" spirit:minimum="0" spirit:rangeType="long">638</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_IMAGE_HEIGHT</spirit:name>
+        <spirit:displayName>C Image Height</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_HEIGHT" spirit:minimum="0" spirit:rangeType="long">478</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d8920bdd</spirit:name>
+      <spirit:enumeration>8</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fifo/fifo_generator_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0efb/hdl/AXI4S_Filter_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/Soc_Tracking_AXI4S_Filter_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fifo/fifo_generator_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0efb/hdl/AXI4S_Filter_v1_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/Soc_Tracking_AXI4S_Filter_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_AXI4S_Filter_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_AXI4S_Filter_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_AXI4S_Filter_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_AXI4S_Filter_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_AXI4S_Filter_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Apply a filter matrix on an incoming window of pixels</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Soc_Tracking_AXI4S_Filter_0_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_WINDOW_SIZE</spirit:name>
+      <spirit:displayName>Window Size</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_WINDOW_SIZE" spirit:minimum="1" spirit:maximum="7" spirit:rangeType="long">3</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_BITS_PIXEL</spirit:name>
+      <spirit:displayName>Bits Pixel</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_BITS_PIXEL" spirit:choiceRef="choice_list_d8920bdd">8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_DIVISER</spirit:name>
+      <spirit:displayName>Filter Diviser</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_DIVISER">16</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_1</spirit:name>
+      <spirit:displayName>1-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_1">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_2</spirit:name>
+      <spirit:displayName>1-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_2">2</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_2">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_3</spirit:name>
+      <spirit:displayName>1-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_3">1</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_3">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_4</spirit:name>
+      <spirit:displayName>1-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_5</spirit:name>
+      <spirit:displayName>1-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_6</spirit:name>
+      <spirit:displayName>1-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_1_7</spirit:name>
+      <spirit:displayName>1-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_1_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_1_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_1</spirit:name>
+      <spirit:displayName>2-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_1">2</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_1">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_2</spirit:name>
+      <spirit:displayName>2-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_2">4</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_2">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_3</spirit:name>
+      <spirit:displayName>2-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_3">2</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_3">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_4</spirit:name>
+      <spirit:displayName>2-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_5</spirit:name>
+      <spirit:displayName>2-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_6</spirit:name>
+      <spirit:displayName>2-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_2_7</spirit:name>
+      <spirit:displayName>2-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_2_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_2_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_1</spirit:name>
+      <spirit:displayName>3-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_1">1</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_1">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_2</spirit:name>
+      <spirit:displayName>3-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_2">2</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_2">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_3</spirit:name>
+      <spirit:displayName>3-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_3">1</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_3">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_4</spirit:name>
+      <spirit:displayName>3-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_5</spirit:name>
+      <spirit:displayName>3-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_6</spirit:name>
+      <spirit:displayName>3-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_3_7</spirit:name>
+      <spirit:displayName>3-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_3_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_3_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_1</spirit:name>
+      <spirit:displayName>4-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_2</spirit:name>
+      <spirit:displayName>4-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_2">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_3</spirit:name>
+      <spirit:displayName>4-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_3">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_4</spirit:name>
+      <spirit:displayName>4-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_5</spirit:name>
+      <spirit:displayName>4-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_6</spirit:name>
+      <spirit:displayName>4-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_4_7</spirit:name>
+      <spirit:displayName>4-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_4_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_4_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_1</spirit:name>
+      <spirit:displayName>5-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_2</spirit:name>
+      <spirit:displayName>5-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_2">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_3</spirit:name>
+      <spirit:displayName>5-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_3">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_4</spirit:name>
+      <spirit:displayName>5-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_5</spirit:name>
+      <spirit:displayName>5-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_6</spirit:name>
+      <spirit:displayName>5-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_5_7</spirit:name>
+      <spirit:displayName>5-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_5_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_5_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_1</spirit:name>
+      <spirit:displayName>6-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_2</spirit:name>
+      <spirit:displayName>6-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_2">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_3</spirit:name>
+      <spirit:displayName>6-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_3">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_4</spirit:name>
+      <spirit:displayName>6-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_5</spirit:name>
+      <spirit:displayName>6-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_6</spirit:name>
+      <spirit:displayName>6-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_6_7</spirit:name>
+      <spirit:displayName>6-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_6_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_6_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_1</spirit:name>
+      <spirit:displayName>7-1</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_2</spirit:name>
+      <spirit:displayName>7-2</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_2">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_3</spirit:name>
+      <spirit:displayName>7-3</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_3">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_4</spirit:name>
+      <spirit:displayName>7-4</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_4">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_4">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_5</spirit:name>
+      <spirit:displayName>7-5</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_5">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_5">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_6</spirit:name>
+      <spirit:displayName>7-6</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_6">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_6">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_FILTER_PARAM_7_7</spirit:name>
+      <spirit:displayName>7-7</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FILTER_PARAM_7_7">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.C_FILTER_PARAM_7_7">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_IMAGE_WIDTH</spirit:name>
+      <spirit:displayName>C Image Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IMAGE_WIDTH">638</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_IMAGE_HEIGHT</spirit:name>
+      <spirit:displayName>C Image Height</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IMAGE_HEIGHT">478</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>AXI4S_Filter_v1.0</xilinx:displayName>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@351c6b16_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd976df_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2430ef2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31612c48_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51fb1754_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c6912aa_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38da1a1a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42320088_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@683e693d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7428d5cb_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e9407e2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@549bb08a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d09a23_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27fb4305_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2faba08c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@619274f2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30dc640d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5203ad17_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc5cc00_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ca2a8f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@96f1575_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62616fe1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0293ab_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@152ea812_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f86bcb6_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6177b7_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16d5a5b1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5658a95f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5a4727_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52014b12_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2182916e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@416ae671_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5308578c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bceb351_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e0fac3_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6468e051_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@272e051d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@724e825a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@345faf58_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54b9c2f2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f4beb34_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a33eec5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@497fdb0a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad48d65_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc8a840_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781f0640_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae05538_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367d9366_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9a2c38_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff60e1e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41034203_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@baae80a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2287c3fd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@604c4644_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29e4dad6_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cff1b69_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec65fe8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41c4ec89_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@237270db_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc198f3_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21f22e76_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@519fdf52_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ec8882f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42dd25_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53cdb98b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ea93054_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31b895bc_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@491ad301_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63a5f0ba_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34982d5c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12564246_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3dcd7_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@545b00f2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c43082_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@641a2569_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c05dad0_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2833ed0e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64504400_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4323e2b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@223d82d2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b6d725_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad45798_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a59f35_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@455a6c88_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e0e1a5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ccaf90_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f80aba9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69b922fa_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2547361b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ccf642_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c7baa6c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa6f0d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@462bb074_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@389e9916_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542edbf8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3444ecf2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c4f3bb8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@569ddb4a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@328cef89_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@154bb91a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c093a37_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fe07594_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1b3b9a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48523be8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a30f014_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f821066_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e5278f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247df84a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@350e71aa_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216b4d42_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c043ed6_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1afb6dd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d068b8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c804ba2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@235b347d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9b392f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a147fa1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c362178_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c583ae2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32fe938c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6926144c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@188d9e17_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e0c25c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320f850a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@90d5616_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3d99ef_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5990d38f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b0b813_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b2d4bce_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddd5fa1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9f5387_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b44e63_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43312d44_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b2fdba_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@936b8a1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a6f7dc_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cea7e6f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542fe281_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@797c671e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c5b3f0d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af5f900_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@349d38e6_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ccacf60_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45afce42_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67db56b1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e723061_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385e3b20_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9dafce_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e792666_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2097836c_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d566d13_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c36da17_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6995edda_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb1175d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79eb5af1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1034804d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60302c44_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b729cf3_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4534c4d0_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674b8e52_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@438834e6_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8d2ba7_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14463767_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e62d687_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c66fcd9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@613b221f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eec4946_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53f7148b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@707db97d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65147c0d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64ca3b8b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@382a8a92_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a518f81_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a53733d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11907ef1_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691320c5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7917cac2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a4fe3d9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56a28607_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d57055_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6aaeb7d9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@188676fd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e46726d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b99699_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49acb453_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@284e7fb8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@491d857e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f362c8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74d5d57a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26dc2ff0_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59f0b1e4_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f674c8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bbd89ee_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e45dd4_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff920bd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5408e05_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e9dffc_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b175ebe_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23c2e4db_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23523dcc_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2e4826_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b6bee4a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2746c343_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10919707_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b3d985_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3518e82e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46452b7f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c32b633_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747ecfb5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43f7718b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a3df47a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46584e5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@796782d5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f49018b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758323_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c515eb_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5761b452_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6acb5703_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111a5ad7_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510232fd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e0c2d5b_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24287842_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae71fde_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef53a21_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fb31fcd_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e28607d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c063d88_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a327c88_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5296f025_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@773748c9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c4f6bca_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d097e4_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@440999d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2765b481_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d6d2a6e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@245a7182_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44567250_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@455cfce9_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1646f9be_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1228eda5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d882577_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d192e4_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5595f080_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39646180_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b77ae0f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73b6e4df_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b4ebdca_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b38aade_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38fec81f_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4374e268_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d74d482_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7502d2d2_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e9c2c0_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0af09e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@338b9f2a_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ff9656_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ace18c5_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@576febac_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@663d8a9d_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@342b6855_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e93e696_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc7ebf8_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15bc2df_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@388e4376_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d809de_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754c6f4e_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fccd2e7_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cef6964_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@436bd848_ARCHIVE_LOCATION">c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64907aa1_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38bf5fe5_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20f2c269_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10e17a8c_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ae4b75_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa43743_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50082c1a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d2e113_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4102eef7_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d527c1_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23fbc30f_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e066d1b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@352e9c93_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b42d913_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781f3a3b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f68faf4_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f18efd2_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22213f7b_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a66bfad_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172f5c02_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b8f8b3_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Filter_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.HAS_TSTRB" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.WIZ_DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ACLK.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS_ARESETN.POLARITY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.HAS_TSTRB" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS.WIZ_DATA_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ACLK.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_ARESETN.POLARITY" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="25306d00"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e009d59a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="53f2dba9"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="8c056fe0"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="761f288d"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

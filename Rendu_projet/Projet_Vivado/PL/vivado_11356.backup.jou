@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep  8 12:07:11 2026
+# Process ID: 11356
+# Current directory: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21016 C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL\Soc_Tracking.xpr
+# Log file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/vivado.log
+# Journal file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd}
+reset_run Soc_Tracking_processing_system7_0_0_synth_1
+reset_run Soc_Tracking_xbar_0_synth_1
+reset_run Soc_Tracking_DMA24bUnit_mm2s_0_0_synth_1
+reset_run Soc_Tracking_DMA_controller_0_0_synth_1
+reset_run Soc_Tracking_auto_pc_1_synth_1
+reset_run Soc_Tracking_auto_us_0_synth_1
+reset_run Soc_Tracking_auto_ds_0_synth_1
+reset_run Soc_Tracking_auto_pc_0_synth_1
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd]
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_xbar_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_auto_ds_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_DMA24bUnit_mm2s_0_0] }
+catch { config_ip_cache -export [get_ips -all Soc_Tracking_DMA_controller_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd]
+launch_runs Soc_Tracking_processing_system7_0_0_synth_1 Soc_Tracking_xbar_0_synth_1 Soc_Tracking_DMA24bUnit_mm2s_0_0_synth_1 Soc_Tracking_DMA_controller_0_0_synth_1 Soc_Tracking_auto_pc_1_synth_1 Soc_Tracking_auto_us_0_synth_1 Soc_Tracking_auto_ds_0_synth_1 Soc_Tracking_auto_pc_0_synth_1 -jobs 8
+wait_on_run Soc_Tracking_processing_system7_0_0_synth_1
+wait_on_run Soc_Tracking_xbar_0_synth_1
+wait_on_run Soc_Tracking_DMA24bUnit_mm2s_0_0_synth_1
+wait_on_run Soc_Tracking_DMA_controller_0_0_synth_1
+wait_on_run Soc_Tracking_auto_pc_1_synth_1
+wait_on_run Soc_Tracking_auto_us_0_synth_1
+wait_on_run Soc_Tracking_auto_ds_0_synth_1
+wait_on_run Soc_Tracking_auto_pc_0_synth_1
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet

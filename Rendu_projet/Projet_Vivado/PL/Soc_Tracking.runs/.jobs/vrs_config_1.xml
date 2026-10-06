@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Soc_Tracking_processing_system7_0_0_synth_1" LaunchDir="C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.runs/Soc_Tracking_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_v_tpg_0_0_synth_1" LaunchDir="C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.runs/Soc_Tracking_v_tpg_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_auto_pc_0_synth_1" LaunchDir="C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.runs/Soc_Tracking_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.runs/Soc_Tracking_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_VGA_controller_0_0_synth_1" LaunchDir="C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.runs/Soc_Tracking_VGA_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

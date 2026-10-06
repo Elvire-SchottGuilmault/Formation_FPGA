@@ -323,7 +323,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -371,7 +371,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -419,7 +419,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M00_AXIS_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -486,7 +486,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4dc19969</spirit:value>
+            <spirit:value>069380e4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -502,7 +502,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4dc19969</spirit:value>
+            <spirit:value>069380e4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1112,28 +1112,28 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_IMAGE_WIDTH</spirit:name>
         <spirit:displayName>C Image Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_WIDTH" spirit:minimum="0">640</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_WIDTH" spirit:minimum="0" spirit:rangeType="long">640</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_IMAGE_HEIGHT</spirit:name>
         <spirit:displayName>C Image Height</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_HEIGHT" spirit:minimum="0">480</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_IMAGE_HEIGHT" spirit:minimum="0" spirit:rangeType="long">480</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_4c727418</spirit:name>
-      <spirit:enumeration>8</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6fc15197</spirit:name>
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d8920bdd</spirit:name>
+      <spirit:enumeration>8</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_ce1226b1</spirit:name>
@@ -1151,7 +1151,7 @@
       <spirit:file>
         <spirit:name>hdl/AXI4S_Binarisation_AXI4L_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e47a00c5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_4a7c9300</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1220,7 +1220,7 @@
       <spirit:name>C_S00_AXIS_TDATA_WIDTH</spirit:name>
       <spirit:displayName>C S00 AXIS TDATA WIDTH</spirit:displayName>
       <spirit:description>AXI4Stream sink: Data Width</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_4c727418" spirit:order="3">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_d8920bdd" spirit:order="3">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1283,7 +1283,7 @@
       <spirit:name>C_M00_AXIS_TDATA_WIDTH</spirit:name>
       <spirit:displayName>C M00 AXIS TDATA WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_4c727418" spirit:order="8">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_d8920bdd" spirit:order="8">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1316,8 +1316,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI4S_Binarisation_AXI4L_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-30T13:59:11Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-05T09:42:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@36492297_ARCHIVE_LOCATION">v:/ip_repo/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6afa6631_ARCHIVE_LOCATION">v:/ip_repo/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
@@ -1342,16 +1342,44 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc3020f_ARCHIVE_LOCATION">v:/ip_repo/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@55960e91_ARCHIVE_LOCATION">v:/ip_repo/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4c090b96_ARCHIVE_LOCATION">v:/ip_repo/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@355e586e_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66285879_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@101d8eea_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68423b4e_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620cd8bc_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a9a26c5_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5352a3da_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad53726_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d82f26_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@760cbd81_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ebd26c8_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47237683_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7976dd58_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6f59d8_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cfb824c_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a8b980_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@346777ba_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c506c3f_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@272b046a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45ff07f2_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6efc4068_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d75efc_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e0fe93_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cd55f39_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9516c08_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f335d9a_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb42085_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7930a8d9_ARCHIVE_LOCATION">v:/MyIPs/AXI4S_Binarisation_AXI4L_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="92581414"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e056ad4b"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="42573a53"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="014b3baa"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c8c811a1"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="9bb8b679"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="262f4ef8"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="cca15e05"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6ac8a016"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

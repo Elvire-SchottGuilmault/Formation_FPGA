@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct  2 18:19:35 2026
+# Process ID: 6668
+# Current directory: V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1_synth_1
+# Command line: vivado.exe -log Soc_Tracking_AXI4S_fifo_buffer_sl_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Soc_Tracking_AXI4S_fifo_buffer_sl_0_1.tcl
+# Log file: V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1_synth_1/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1.vds
+# Journal file: V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Soc_Tracking_AXI4S_fifo_buffer_sl_0_1.tcl -notrace

@@ -1,0 +1,147 @@
+-makelib ies_lib/xilinx_vip -sv \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
+-endlib
+-makelib ies_lib/xpm -sv \
+  "E:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "E:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+-endlib
+-makelib ies_lib/xpm \
+  "E:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
+-makelib ies_lib/axi_infrastructure_v1_1_0 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_vip_v1_1_8 -sv \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/94c3/hdl/axi_vip_v1_1_vl_rfs.sv" \
+-endlib
+-makelib ies_lib/processing_system7_vip_v1_0_10 -sv \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/34f8/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_processing_system7_0_0/sim/Soc_Tracking_processing_system7_0_0.v" \
+-endlib
+-makelib ies_lib/lib_cdc_v1_0_2 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib ies_lib/proc_sys_reset_v5_0_13 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_rst_ps7_0_100M_0/sim/Soc_Tracking_rst_ps7_0_100M_0.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_DMA24b_mm2s.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_DMA24b_mm2s_fetch.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_DMA24b_mm2s_streamout.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_fifo_w12_d2_S.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_fifo_w128_d256_A.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_gmem_m_axi.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_mul_mul_11s_13ns_24_4_1.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_mul_mul_12ns_8ns_20_4_1.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_regslice_both.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s_start_for_DMA24b_mm2s_streamout_U0.vhd" \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/6268/hdl/vhdl/DMA24bUnit_mm2s.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_DMA24bUnit_mm2s_0_1/sim/Soc_Tracking_DMA24bUnit_mm2s_0_1.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/1168/hdl/AXI4S_zero_padding_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_zero_padding_0_0/sim/Soc_Tracking_AXI4S_zero_padding_0_0.vhd" \
+-endlib
+-makelib ies_lib/fifo_generator_v13_2_5 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_0/src/fifo_generator_0/simulation/fifo_generator_vlog_beh.v" \
+-endlib
+-makelib ies_lib/fifo_generator_v13_2_5 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_0/src/fifo_generator_0/hdl/fifo_generator_v13_2_rfs.vhd" \
+-endlib
+-makelib ies_lib/fifo_generator_v13_2_5 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_0/src/fifo_generator_0/hdl/fifo_generator_v13_2_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_0/src/fifo_generator_0/sim/fifo_generator_0.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ipshared/0efb/hdl/AXI4S_Filter_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_0/sim/Soc_Tracking_AXI4S_Filter_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Filter_0_1/sim/Soc_Tracking_AXI4S_Filter_0_1.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/bfb1/hdl/AXI4_Stream_RGB_to_grey_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4_Stream_RGB_to_g_0_0/sim/Soc_Tracking_AXI4_Stream_RGB_to_g_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/3eeb/src/VGA_controller.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_VGA_controller_0_0/sim/Soc_Tracking_VGA_controller_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/fd03/src/Video_TPG.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_Video_TPG_0_0/sim/Soc_Tracking_Video_TPG_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/7595/hdl/DMA_controller_AXI4L_v1_0_S00_AXI.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/7595/hdl/DMA_controller_AXI4L_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_DMA_controller_AXI4L_0_0/sim/Soc_Tracking_DMA_controller_AXI4L_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/25bf/hdl/Input_selector_AXI4L_v1_0_S00_AXI.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/25bf/hdl/Input_selector_AXI4L_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_Input_selector_AXI4L_0_0/sim/Soc_Tracking_Input_selector_AXI4L_0_0.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Stream_Duplica_0_0/src/fifo_generator_24/sim/fifo_generator_24.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ipshared/b078/hdl/AXI4S_Stream_Duplicator_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Stream_Duplica_0_0/sim/Soc_Tracking_AXI4S_Stream_Duplica_0_0.vhd" \
+-endlib
+-makelib ies_lib/generic_baseblocks_v2_1_0 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_register_slice_v2_1_22 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_data_fifo_v2_1_21 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_crossbar_v2_1_23 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/bc0a/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_xbar_1/sim/Soc_Tracking_xbar_1.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ipshared/c703/hdl/AXI4S_Overlay_AXI4L_v1_0_S00_AXI.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/c703/hdl/AXI4S_Overlay_AXI4L_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Overlay_AXI4L_0_0/sim/Soc_Tracking_AXI4S_Overlay_AXI4L_0_0.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_fifo_buffer_sl_0_0/src/fifo_generator_638/sim/fifo_generator_638.v" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_fifo_buffer_sl_0_0/src/fifo_generator_640/sim/fifo_generator_640.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ipshared/606f/hdl/AXI4S_fifo_buffer_slid_window_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_fifo_buffer_sl_0_0/sim/Soc_Tracking_AXI4S_fifo_buffer_sl_0_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1/sim/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/65d7/hdl/AXI4S_Binarisation_AXI4L_v1_0_S00_AXI.vhd" \
+  "../../../bd/Soc_Tracking/ipshared/65d7/hdl/AXI4S_Binarisation_AXI4L_v1_0.vhd" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_AXI4S_Binarisation_A_0_0/sim/Soc_Tracking_AXI4S_Binarisation_A_0_0.vhd" \
+-endlib
+-makelib ies_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_auto_pc_0/sim/Soc_Tracking_auto_pc_0.v" \
+-endlib
+-makelib ies_lib/axi_clock_converter_v2_1_21 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_4_4 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib ies_lib/axi_dwidth_converter_v2_1_22 \
+  "../../../../Soc_Tracking.gen/sources_1/bd/Soc_Tracking/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_auto_ds_0/sim/Soc_Tracking_auto_ds_0.v" \
+  "../../../bd/Soc_Tracking/ip/Soc_Tracking_auto_pc_1/sim/Soc_Tracking_auto_pc_1.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Soc_Tracking/sim/Soc_Tracking.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  glbl.v
+-endlib
+

@@ -1,0 +1,914 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 16 15:49:45 2026
+# Process ID: 23592
+# Current directory: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12932 C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL\Soc_Tracking.xpr
+# Log file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/vivado.log
+# Journal file: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Line_buf_Slid_window_1.0'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/ip_repo/AXI4S_Line_buf_Slid_window_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 1085.805 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd}
+Reading block design file <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:user:VGA_controller:1.0 - VGA_controller_0
+Adding component instance block -- xilinx.com:user:DMA_controller:1.0 - DMA_controller_0
+Adding component instance block -- xilinx.com:hls:DMA24bUnit_mm2s:1.0 - DMA24bUnit_mm2s_0
+Adding component instance block -- xilinx.com:user:video_input_selector:1.0 - video_input_selector_0
+Adding component instance block -- xilinx.com:user:Video_TPG:1.0 - Video_TPG_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:user:video_input_register:1.0 - video_input_register_0
+Adding component instance block -- xilinx.com:user:AXI4_Stream_RGB_to_grey:1.0 - AXI4_Stream_RGB_to_g_0
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+Successfully read diagram <Soc_Tracking> from block design file <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/Soc_Tracking.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1178.309 ; gain = 84.621
+create_bd_cell -type ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 AXI4S_Line_buf_Slid_0
+set_property location {7 2301 182} [get_bd_cells AXI4S_Line_buf_Slid_0]
+connect_bd_intf_net [get_bd_intf_pins AXI4_Stream_RGB_to_g_0/M00_AXIS] [get_bd_intf_pins AXI4S_Line_buf_Slid_0/S00_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aclk]
+regenerate_bd_layout
+open_project C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1393.270 ; gain = 71.527
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_RGB_to_grey/test_RGB_to_grey.bd}
+Reading block design file <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_RGB_to_grey/test_RGB_to_grey.bd>...
+Adding component instance block -- xilinx.com:user:AXI4_Stream_RGB_to_grey:1.0 - AXI4_Stream_RGB_to_g_0
+Successfully read diagram <test_RGB_to_grey> from block design file <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_RGB_to_grey/test_RGB_to_grey.bd>
+create_bd_design "test_line_buf_slid_window"
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 AXI4S_Line_buf_Slid_0
+endgroup
+update_compile_order -fileset sources_1
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins AXI4S_Line_buf_Slid_0/S00_AXIS]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins AXI4S_Line_buf_Slid_0/M00_AXIS]
+endgroup
+create_bd_port -dir I -type clk -freq_hz 100000000 aclk
+connect_bd_net [get_bd_ports aclk] [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aclk]
+connect_bd_net [get_bd_ports aclk] [get_bd_pins AXI4S_Line_buf_Slid_0/m00_axis_aclk]
+startgroup
+create_bd_port -dir I -type rst aresetn
+endgroup
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins AXI4S_Line_buf_Slid_0/s00_axis_aresetn]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins AXI4S_Line_buf_Slid_0/m00_axis_aresetn]
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -top
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/ui/bd_4b08ec91.ui> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1597.395 ; gain = 148.715
+add_files -norecurse c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+update_compile_order -fileset sources_1
+create_fileset -simset sim_lb_sd
+set_property SOURCE_SET sources_1 [get_filesets sim_lb_sd]
+add_files -fileset sim_lb_sd -norecurse C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd
+current_fileset -simset [ get_filesets sim_lb_sd ]
+update_compile_order -fileset sim_lb_sd
+set_property SOURCE_SET sources_1 [get_filesets sim_lb_sd]
+add_files -fileset sim_lb_sd -norecurse {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_monitor.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_driver.vhd}
+update_compile_order -fileset sim_lb_sd
+open_bd_design {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd}
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1644.254 ; gain = 0.000
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [IP_Flow 19-5655] Packaging a component with a VHDL-2008 top file is not fully supported. Please refer to UG118 'Creating and Packaging Custom IP'.
+ipx::add_port_map TUSER [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name s00_axis_tuser [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces S00_AXIS -of_objects [ipx::current_core]]]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]
+set_property physical_name m00_axis_tuser [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces M00_AXIS -of_objects [ipx::current_core]]]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+launch_runs synth_1 -jobs 8
+[Wed Sep 16 16:22:03 2026] Launched synth_1...
+Run output will be captured here: c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project/AXI4S_Line_buf_Slid_window_v1_0_project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Sep 16 16:23:31 2026] Launched synth_1...
+Run output will be captured here: c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project/AXI4S_Line_buf_Slid_window_v1_0_project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Wed Sep 16 16:26:05 2026] Launched synth_1...
+Run output will be captured here: c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project/AXI4S_Line_buf_Slid_window_v1_0_project.runs/synth_1/runme.log
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [IP_Flow 19-5655] Packaging a component with a VHDL-2008 top file is not fully supported. Please refer to UG118 'Creating and Packaging Custom IP'.
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'
+report_ip_status -name ip_status 
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd'
+INFO: [IP_Flow 19-3422] Upgraded test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0 (AXI4S_Line_buf_Slid_window_v1.0 1.0) from revision 3 to revision 5
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'm00_axis_tuser'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's00_axis_tuser'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/ui/bd_4b08ec91.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+make_wrapper -files [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -top
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/ui/bd_4b08ec91.ui> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+INFO: [BD 41-1662] The design 'test_line_buf_slid_window.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/ui/bd_4b08ec91.ui> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI4S_Line_buf_Slid_0 .
+Exporting to file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window.hwh
+Generated Block Design Tcl file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window_bd.tcl
+Generated Hardware Definition File C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.hwdef
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+[Wed Sep 16 16:29:58 2026] Launched test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1...
+Run output will be captured here: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.runs/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+set_property top tb_line_buf_slid_window [get_filesets sim_lb_sd]
+set_property top_lib xil_defaultlib [get_filesets sim_lb_sd]
+update_compile_order -fileset sim_lb_sd
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/8af5/hdl/buffer_type.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/8af5/hdl/AXI4S_Line_buf_Slid_window_IN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_IN'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/8af5/hdl/AXI4S_Line_buf_Slid_window_OUT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_OUT'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/8af5/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ip/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0/sim/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi4s_driver'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/Axi4s_monitor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi4s_monitor'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3311] expression has 9 elements ; formal 'm_tdata' expects 8 [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:201]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1835.754 ; gain = 2.312
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-921] index value 23 is out of range 7 downto 0 [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:221]
+ERROR: [VRFC 10-3599] not all partial formals of 's00_axis_0_tdata' have actual [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:213]
+ERROR: [VRFC 10-975] left bound value <23> of slice is out of range [7:0] of array <s00_axis_tdata> [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:221]
+ERROR: [VRFC 10-1377] slice direction differs from its index subtype range [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:226]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1847.824 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1377] slice direction differs from its index subtype range [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:226]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1847.824 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1377] slice direction differs from its index subtype range [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:226]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1847.824 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-1377] slice direction differs from its index subtype range [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd:226]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1848.934 ; gain = 1.109
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/src/Tests/tb_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_line_buf_slid_window'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+ERROR: [XSIM 43-4187] File "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/8af5/hdl/buffer_type.vhd" Line 7 : The "Vhdl 2008 Unconstrained Array Type as Subtype in Array Type Definition" is not supported yet for simulation.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1856.004 ; gain = 1.945
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.211 ; gain = 12.207
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+[Wed Sep 16 17:09:37 2026] Launched synth_1...
+Run output will be captured here: c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project/AXI4S_Line_buf_Slid_window_v1_0_project.runs/synth_1/runme.log
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'
+report_ip_status -name ip_status 
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd'
+INFO: [IP_Flow 19-3422] Upgraded test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0 (AXI4S_Line_buf_Slid_window_v1.0 1.0) from revision 5 to revision 6
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/ui/bd_4b08ec91.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI4S_Line_buf_Slid_0 .
+Exporting to file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window.hwh
+Generated Block Design Tcl file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window_bd.tcl
+Generated Hardware Definition File C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.hwdef
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1893.293 ; gain = 0.000
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+[Wed Sep 16 17:11:27 2026] Launched test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1...
+Run output will be captured here: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.runs/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/buffer_type.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/AXI4S_Line_buf_Slid_window_IN.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_IN'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/AXI4S_Line_buf_Slid_window_OUT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_OUT'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ip/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0/sim/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+ERROR: [XSIM 43-4187] File "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/buffer_type.vhd" Line 7 : The "Vhdl 2008 Unconstrained Array Type as Subtype in Array Type Definition" is not supported yet for simulation.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1893.293 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1893.293 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+update_compile_order -fileset sim_1
+set_property SOURCE_SET {} [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type_sim.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+update_compile_order -fileset sources_1
+set_property used_in_synthesis true [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+update_compile_order -fileset sources_1
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+set_property used_in_simulation false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type.vhd]
+set_property used_in_synthesis false [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+add_files -norecurse -copy_to c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src {C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_OUT_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/buffer_type_sim.vhd C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/hdl/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+ERROR: [Vivado 12-3630] The destination file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd' already exists, please use -force if you want to overwrite!
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+update_compile_order -fileset sources_1
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+move_files [get_files  c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd'.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::add_file_group -type vhdl:simulation {} [ipx::current_core]
+set_property source_mgmt_mode DisplayOnly [current_project]
+reorder_files -after c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd {c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd}
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+move_files -fileset sim_1 [get_files  {c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd}]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\buffer_type_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\buffer_type.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_v1_0.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_v1_0_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_OUT_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_OUT.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_IN_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\buffer_type_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\buffer_type.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_v1_0.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_v1_0_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_OUT_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_OUT.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_IN_sim.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\buffer_type_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\buffer_type.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_v1_0.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_v1_0_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_OUT_sim.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\hdl\AXI4S_Line_buf_Slid_window_OUT.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\MyIPs\AXI4S_Line_buf_Slid_window_1.0\src\AXI4S_Line_buf_Slid_window_IN_sim.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+set_property top AXI4S_Line_buf_Slid_window_v1_0 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::add_file_group -type vhdl:simulation {} [ipx::current_core]
+ipx::copy_contents_from [ipx::get_file_groups xilinx_testbench -of_objects [ipx::current_core]] [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd'
+INFO: [IP_Flow 19-3422] Upgraded test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0 (AXI4S_Line_buf_Slid_window_v1.0 1.0) from revision 6 to revision 7
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI4S_Line_buf_Slid_0 .
+Exporting to file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window.hwh
+Generated Block Design Tcl file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window_bd.tcl
+Generated Hardware Definition File C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.hwdef
+catch { config_ip_cache -export [get_ips -all test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1979.680 ; gain = 0.000
+launch_runs test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1 -jobs 8
+[Wed Sep 16 17:39:58 2026] Launched test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1...
+Run output will be captured here: C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.runs/test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/2f2f/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-2987] 'buffer_type_sim' is not compiled in library 'xil_defaultlib' [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/2f2f/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd:1]
+INFO: [VRFC 10-3107] analyzing entity 'AXI4S_Line_buf_Slid_window_IN'
+ERROR: [VRFC 10-2989] 't_buffer' is not declared [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/2f2f/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd:24]
+ERROR: [VRFC 10-3782] unit 'axi4s_line_buf_slid_window_in' ignored due to previous errors [C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/2f2f/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd:9]
+INFO: [VRFC 10-3070] VHDL file 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/2f2f/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1979.680 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1982.883 ; gain = 3.203
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd]
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd]
+set_property used_in_synthesis false [get_files -of_objects [get_filesets sim_1] c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd]
+ipx::reorder_files -before src/AXI4S_Line_buf_Slid_window_IN_sim.vhd src/buffer_type_sim.vhd [ipx::get_file_groups xilinx_vhdlbehavioralsimulation -of_objects [ipx::current_core]]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/buffer_type_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_IN_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_OUT_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/src/AXI4S_Line_buf_Slid_window_v1_0_sim.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+set_property core_revision 8 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd'
+INFO: [IP_Flow 19-3422] Upgraded test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0 (AXI4S_Line_buf_Slid_window_v1.0 1.0) from revision 7 to revision 8
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+generate_target Simulation [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+WARNING: [IP_Flow 19-640] IP 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0' does not support specified targets: Simulation. Running all supported targets by default.
+WARNING: [IP_Flow 19-640] IP 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0' does not support specified targets: Simulation. Running all supported targets by default.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI4S_Line_buf_Slid_0 .
+Exporting to file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window.hwh
+Generated Block Design Tcl file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window_bd.tcl
+Generated Hardware Definition File C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.hwdef
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+ERROR: [XSIM 43-4187] File "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/buffer_type.vhd" Line 7 : The "Vhdl 2008 Unconstrained Array Type as Subtype in Array Type Definition" is not supported yet for simulation.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2014.254 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+report_ip_status -name ip_status
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+ipx::edit_ip_in_project -upgrade true -name AXI4S_Line_buf_Slid_window_v1_0_project -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.tmp/AXI4S_Line_buf_Slid_window_v1_0_project c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs/AXI4S_Line_buf_Slid_window_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/vladi/documents/travail/formation_ajc-expleo/projet/pl_test/soc_tracking_tests.tmp/axi4s_line_buf_slid_window_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2014.254 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property core_revision 9 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/MyIPs'
+upgrade_ip -vlnv xilinx.com:user:AXI4S_Line_buf_Slid_window:1.0 [get_ips  test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd'
+INFO: [IP_Flow 19-3422] Upgraded test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0 (AXI4S_Line_buf_Slid_window_v1.0 1.0) from revision 8 to revision 9
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+generate_target Simulation [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd]
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL_test\Soc_Tracking_tests.srcs\sources_1\bd\test_line_buf_slid_window\test_line_buf_slid_window.bd> 
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd
+VHDL Output written to : C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd
+WARNING: [IP_Flow 19-640] IP 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0' does not support specified targets: Simulation. Running all supported targets by default.
+WARNING: [IP_Flow 19-640] IP 'test_line_buf_slid_window_AXI4S_Line_buf_Slid_0_0' does not support specified targets: Simulation. Running all supported targets by default.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block AXI4S_Line_buf_Slid_0 .
+Exporting to file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window.hwh
+Generated Block Design Tcl file C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hw_handoff/test_line_buf_slid_window_bd.tcl
+Generated Hardware Definition File C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/synth/test_line_buf_slid_window.hwdef
+export_ip_user_files -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.srcs/sources_1/bd/test_line_buf_slid_window/test_line_buf_slid_window.bd] -directory C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files -ipstatic_source_dir C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/modelsim} {questa=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/questa} {riviera=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/riviera} {activehdl=C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation -simset [get_filesets sim_lb_sd ]
+Command: launch_simulation -simset sim_lb_sd
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+Excluding slave segment /processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM from address space /processing_system7_0/Data.
+Excluding slave segment /video_input_register_0/S00_AXI/S00_AXI_reg from address space /DMA24bUnit_mm2s_0/Data_m_axi_gmem.
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_lb_sd'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_line_buf_slid_window' in fileset 'sim_lb_sd'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_lb_sd'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_line_buf_slid_window_vlog.prj"
+"xvhdl --incr --relax -prj tb_line_buf_slid_window_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/sim/test_line_buf_slid_window.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.gen/sources_1/bd/test_line_buf_slid_window/hdl/test_line_buf_slid_window_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_line_buf_slid_window_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim'
+"xelab -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a9c1d9c8a1b34f34afaee4b640e45543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_line_buf_slid_window_behav xil_defaultlib.tb_line_buf_slid_window xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+ERROR: [XSIM 43-4187] File "C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.ip_user_files/bd/test_line_buf_slid_window/ipshared/af46/hdl/buffer_type.vhd" Line 7 : The "Vhdl 2008 Unconstrained Array Type as Subtype in Array Type Definition" is not supported yet for simulation.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL_test/Soc_Tracking_tests.sim/sim_lb_sd/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 2048.777 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+save_bd_design
+Wrote  : <C:\Users\vladi\Documents\Travail\Formation_AJC-Expleo\Projet\PL\Soc_Tracking.srcs\sources_1\bd\Soc_Tracking\Soc_Tracking.bd> 
+Wrote  : <C:/Users/vladi/Documents/Travail/Formation_AJC-Expleo/Projet/PL/Soc_Tracking.srcs/sources_1/bd/Soc_Tracking/ui/bd_127f896f.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:58:54 2026...

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Soc_Tracking_VGA_controller_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_VGA_controller_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_Video_TPG_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_Video_TPG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4_Stream_RGB_to_g_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4_Stream_RGB_to_g_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_fifo_buffer_sl_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_fifo_buffer_sl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_fifo_buffer_sl_0_1_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_fifo_buffer_sl_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_Filter_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_Filter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_Filter_0_1_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_Filter_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_DMA_controller_AXI4L_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_DMA_controller_AXI4L_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_Input_selector_AXI4L_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_Input_selector_AXI4L_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_Binarisation_A_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_Binarisation_A_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_Stream_Duplica_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_Stream_Duplica_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_AXI4S_Overlay_AXI4L_0_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_AXI4S_Overlay_AXI4L_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_xbar_1_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_xbar_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_auto_ds_0_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Soc_Tracking_auto_pc_1_synth_1" LaunchDir="V:/PL/Soc_Tracking.runs/Soc_Tracking_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

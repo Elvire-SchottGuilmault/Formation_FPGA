@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>Soc_Tracking_Video_TPG_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TUSER</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TDATA</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TLAST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TVALID</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TSTRB</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_TREADY</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES">3</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.LAYERED_METADATA">undef</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_ARESETN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_ARESETN</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ARESETN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXIS_ACLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>M_AXIS_ACLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.ASSOCIATED_RESET">M_AXIS_ARESETN</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.ASSOCIATED_BUSIF">M_AXIS</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.CLK_DOMAIN">Soc_Tracking_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.M_AXIS_ACLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:modelName>Video_TPG</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:50 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f923952c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f923952c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Soc_Tracking_Video_TPG_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:50 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f923952c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:modelName>Video_TPG</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:50 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:3c06e53d</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Soc_Tracking_Video_TPG_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 14:59:50 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:3c06e53d</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Sep 30 15:00:01 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:f923952c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>M_AXIS_ACLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_ARESETN</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TREADY</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TDATA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) - 1)">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TSTRB</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TLAST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TUSER</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>M_AXIS_TVALID</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S_AXIS_TDATA_WIDTH</spirit:name>
+        <spirit:displayName>C S Axis Tdata Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH">24</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/fd03/src/Video_TPG.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/Soc_Tracking_Video_TPG_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/fd03/src/Video_TPG.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/Soc_Tracking_Video_TPG_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_Video_TPG_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_Video_TPG_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_Video_TPG_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_Video_TPG_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Soc_Tracking_Video_TPG_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Video_TPG_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S_AXIS_TDATA_WIDTH</spirit:name>
+      <spirit:displayName>C S Axis Tdata Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S_AXIS_TDATA_WIDTH">24</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Soc_Tracking_Video_TPG_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>Video_TPG_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a9b72b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@437cc9c2_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5028b8d9_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@668fd7d8_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32c6d45f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6cf5cc_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddb66b3_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf06e93_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26cf9683_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64265fec_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@492b405_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db5511d_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bba916a_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@659f6b00_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b34f1b4_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f38144_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2463a41f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb59faa_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74aeaa52_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cb2300f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28960e29_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f4b1a22_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@270bac26_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d8951b_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13d3028_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@179517f4_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59ae1de8_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fce5137_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7223090e_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ded7f88_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48fee229_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11076940_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10585b5f_ARCHIVE_LOCATION">c:/users/vladi/documents/travail/formation_ajc-expleo/projet/myips/video_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbf728f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50953306_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f8501b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@532a714b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a7e9ed_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a9b0438_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@664937a2_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a2c43c_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a6718fb_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e9b329d_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e69f334_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@522abd6e_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51fbb3e4_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2964c7ed_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dbe9a2c_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54805c1b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a1f983e_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d0846f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc3da09_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c82e0eb_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6408ec01_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73cb6e4f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77fba73f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f63e7ca_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31da4563_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b13ceae_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@362149f8_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b515c18_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b087a20_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@432bcf7e_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73ef9593_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2014c80f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@635706fb_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16ea778e_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd9e3ec_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6848dc83_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10ef9947_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d54be6_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52d3d08a_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c3600c_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c28eb44_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32cf0ab_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319a8e3b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@539eb92f_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@574d03ab_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4056bf0_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ea56f20_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62ef63c6_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa1952d_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a28cb3c_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d7b393_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541fd6f9_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@381bf5ed_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57b27cdc_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ca61827_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f08e744_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430b7379_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbfdd43_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8dc5c6_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d40d7b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba78e1b_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f7720_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@622b0ce5_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a274795_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f73b4d4_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@88446c6_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c43cd_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c051115_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f6c3b68_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@353947ce_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ee8ed57_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5eecae_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef4aa5a_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5655df9e_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69621635_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b956ef6_ARCHIVE_LOCATION">v:/MyIPs/Video_TPG</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.HAS_TSTRB" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ACLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_ARESETN.POLARITY" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4588448b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0e52a774"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="ab6faa83"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="783afdfa"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d618c04e"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
